@@ -4,7 +4,7 @@
     <groupId>com.richapps.volleyutils</groupId>
     <artifactId>quiver</artifactId>
     <name>Quiver</name>
-    <version>1.1-SNAPSHOT</version>
+    <version>1.0.1-SNAPSHOT</version>
     <description>Library of helper classes for using Volley</description>
 
     <dependencies>
@@ -25,7 +25,7 @@
         <dependency>
             <groupId>com.google.android.volley</groupId>
             <artifactId>volley</artifactId>
-            <version>1.0.1</version>
+            <version>1.0.2</version>
         </dependency>
 
         <dependency>
