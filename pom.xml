@@ -6,7 +6,12 @@
     <name>Quiver</name>
     <version>1.0.1-SNAPSHOT</version>
     <description>Library of helper classes for using Volley</description>
-
+    <scm>
+        <connection>scm:git:git@github.com:Richie97/Quiver.git</connection>
+        <developerConnection>scm:git:git@github.com:Richie97/Quiver.git
+        </developerConnection>
+        <tag>HEAD</tag>
+    </scm>
     <dependencies>
 
         <dependency>
