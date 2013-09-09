@@ -25,4 +25,7 @@ public class NetworkResponseDecorator {
             return new String(mResponse.data);
         }
     }
+    public NetworkResponse getResponse(){
+        return mResponse;
+    }
 }
