@@ -14,6 +14,7 @@ import android.view.ViewGroup;
  * Created by ericrichardson on 8/29/13.
  */
 public class FadeInProperAspectRatioNetworkImageView extends FadeInNetworkImageView{
+    boolean loaded = false;
     public FadeInProperAspectRatioNetworkImageView(Context context) {
         super(context);
     }
@@ -29,6 +30,10 @@ public class FadeInProperAspectRatioNetworkImageView extends FadeInNetworkImageV
     @Override
     public void setImageBitmap(Bitmap bitmap) {
         if(bitmap == null){
+            return;
+        }
+        if(loaded && getHeight() == bitmap.getHeight()){
+            super.setImageBitmap(bitmap);
             return;
         }
         int width = bitmap.getWidth();
