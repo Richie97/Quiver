@@ -35,3 +35,4 @@ tmp/*
 
 # Develop
 assets/android.properties
+.gradle

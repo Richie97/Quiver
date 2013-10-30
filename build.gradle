@@ -6,10 +6,16 @@ buildscript {
         classpath 'com.android.tools.build:gradle:0.5.+'
     }
 }
-apply plugin: 'android'
+apply plugin: 'android-library'
+apply plugin: 'maven'
+
+project.archivesBaseName = "quiver"
+group = "com.richapps.volleyutils"
+version = "1.0.3-SNAPSHOT"
 
 repositories {
     mavenCentral()
+    mavenLocal()
 }
 
 android {
@@ -24,4 +30,16 @@ android {
 
 dependencies {
     compile 'com.android.support:appcompat-v7:18.0.0'
+    compile 'com.google.android.volley:volley:1.0.2'
+    compile 'com.jakewharton:disklrucache:1.1.0'
+    compile 'com.squareup.okhttp:okhttp:1.2.1'
 }
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository url: 'file://' + new File(System.getProperty('user.home'), '.m2/repository').absolutePath
+        }
+    }
+}
+task install(dependsOn: uploadArchives)
