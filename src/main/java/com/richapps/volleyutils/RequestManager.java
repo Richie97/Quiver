@@ -4,6 +4,7 @@ import android.content.Context;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
+import com.android.volley.toolbox.HurlStack;
 
 /**
  * Created by ericrichardson on 8/13/13.
@@ -17,7 +18,11 @@ public class RequestManager {
     }
 
     public static void init(Context context) {
-        mRequestQueue = Volley.newRequestQueue(context, new OkHttpStack());
+        init(context, new OkHttpStack());
+    }
+
+    public static void init(Context context, HurlStack stack) {
+        mRequestQueue = Volley.newRequestQueue(context, stack);
     }
 
     public static RequestQueue getRequestQueue() {
