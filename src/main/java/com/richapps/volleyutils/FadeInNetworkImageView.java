@@ -35,6 +35,7 @@ public class FadeInNetworkImageView extends NetworkImageView {
                 new ColorDrawable(android.R.color.transparent),
                 new BitmapDrawable(getContext().getResources(), bm)
         });
+        td.setCrossFadeEnabled(true);
         setImageDrawable(td);
         td.startTransition(FADE_IN_TIME_MS);
     }

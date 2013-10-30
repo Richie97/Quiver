@@ -60,6 +60,7 @@ public class FadeInProperAspectRatioNetworkImageView extends FadeInNetworkImageV
                 new ColorDrawable(android.R.color.transparent),
                 new BitmapDrawable(getContext().getResources(), bitmap)
         });
+        td.setCrossFadeEnabled(true);
         setImageDrawable(td);
         td.startTransition(FADE_IN_TIME_MS);
         // Now change ImageView's dimensions to match the scaled image
